@@ -13,11 +13,11 @@ return {
             vim.wo.wrap = false
             vim.wo.number = true
             vim.wo.rnu = true
-            ColorMyPencils()
+            Themes()
         end)
 
 
-        vim.keymap.set("n", "<leader>zZ", function()
+        vim.keymap.set("n", "<leader>z", function()
             require("zen-mode").setup {
                 window = {
                     width = 80,
@@ -29,7 +29,7 @@ return {
             vim.wo.number = false
             vim.wo.rnu = false
             vim.opt.colorcolumn = "0"
-            ColorMyPencils()
+            Themes()
         end)
     end
 }

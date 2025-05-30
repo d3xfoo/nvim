@@ -34,17 +34,17 @@ return {
                 min_chars = 2,
             },
 
-            ui = {
-                enable = true,
-                checkboxes = {},
-                bullets = {},
-            },
+        --     ui = {
+        --         enable = false,
+        --         checkboxes = {},
+        --         bullets = {},
+        --     },
         })
 
         vim.api.nvim_create_autocmd("FileType", {
             pattern = "markdown",
             callback = function()
-                vim.opt.conceallevel = 2
+                vim.opt.conceallevel = 0
             end,
         })
 
