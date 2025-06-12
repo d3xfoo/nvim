@@ -8,6 +8,15 @@ function R(name)
     require("plenery.reload").reload_module(name)
 end
 
+autocmd("FileType", {
+    pattern = "netrw",
+    callback = function()
+        vim.opt_local.readonly = false
+        vim.opt_local.modifiable = true
+    end
+})
+
+
 autocmd('TextYankPost', {
     group = yank_group,
     pattern = '*',
