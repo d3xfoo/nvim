@@ -87,7 +87,15 @@ return {
                 ["emmet_ls"] = function()
                     require("lspconfig").emmet_ls.setup({
                         capabilities = capabilities,
-                        filetypes = { "html", "scss" },
+                        filetypes = {
+                            "html",
+                            "scss",
+                            "css",
+                            "javascript",
+                            "javascriptreact",
+                            "typescript",
+                            "typescriptreact"
+                        },
                     })
                 end,
 
