@@ -91,9 +91,7 @@ return {
                             "html",
                             "scss",
                             "css",
-                            "javascript",
                             "javascriptreact",
-                            "typescript",
                             "typescriptreact"
                         },
                     })
