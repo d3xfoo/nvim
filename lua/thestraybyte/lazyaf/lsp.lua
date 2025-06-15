@@ -196,6 +196,7 @@ return {
                 { name = 'nvim_lsp', priority = 900 },
             }, {
                 { name = 'buffer', priority = 500 },
+                { emmet_ls = 'buffer', priority = 300 },
             })
         })
 
