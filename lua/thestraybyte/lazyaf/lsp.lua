@@ -145,6 +145,20 @@ return {
                 ['<C-e>'] = vim.NIL
             }),
 
+            window = {
+                completion = {
+                    scrollbar = false,
+                    border = "rounded",
+                    winhighlight = "Normal:CmpNormal",
+                },
+                documentation = {
+                    scrollbar = false,
+                    border = "rounded",
+                    winhighlight = "Normal:CmpNormal",
+                }
+            },
+
+
             sources = cmp.config.sources({
                 { name = 'luasnip',  priority = 1000 },
                 { name = 'nvim_lsp', priority = 900 },
