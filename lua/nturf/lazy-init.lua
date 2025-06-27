@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    spec = "thestraybyte.lazyaf",
+    spec = "nturf.lazyaf",
     change_detection = { notify = false }
 })
+
