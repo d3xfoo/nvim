@@ -1,55 +1,55 @@
 return {
--- 	"stevearc/conform.nvim",
--- 	event = { "BufWritePre" },
--- 	cmd = { "ConformInfo" },
--- 	opts = {
--- 		formatters_by_ft = {
--- 			javascript = { "biome", "prettier" },
--- 			typescript = { "biome", "prettier" },
--- 			javascriptreact = { "biome", "prettier" },
--- 			typescriptreact = { "biome", "prettier" },
--- 			css = { "biome", "prettier" },
--- 			scss = { "biome", "prettier" },
--- 			html = { "biome", "prettier" },
--- 			json = { "biome", "prettier" },
--- 			yaml = { "prettier" },
--- 			markdown = { "prettier" },
---
--- 			lua = { "stylua" },
--- 			["*"] = { "lsp" },
--- 		},
---
--- 		formatters = {
--- 			stylua = {
--- 				command = "stylua",
--- 				args = {
--- 					"--search-parent-directories",
--- 					"--stdin-filepath",
--- 					"$FILENAME",
--- 					"-",
--- 				},
--- 			},
--- 			prettier = {
--- 				command = "prettier",
--- 				args = { "--stdin-filepath", "$FILENAME" },
--- 			},
--- 			biome = {
--- 				command = "biome",
--- 				args = { "format", "--stdin-file-path", "$FILENAME" },
--- 			},
--- 		},
---
--- 		-- format_on_save = {
--- 		--   timeout_ms = 500,
--- 		--   lsp_fallback = true, -- Fallback to LSP formatter if primary fails
--- 		-- },
--- 	},
--- 	config = function(_, opts)
--- 		require("conform").setup(opts)
---
--- 		vim.keymap.set("n", "<leader>fm", function()
--- 			require("conform").format({ async = true, lsp_fallback = true })
--- 			vim.notify("Formatted buffer", vim.log.levels.INFO)
--- 		end, { desc = "Format current buffer" })
--- 	end,
+	-- "stevearc/conform.nvim",
+	-- event = { "BufWritePre" },
+	-- cmd = { "ConformInfo" },
+	-- opts = {
+	-- 	formatters_by_ft = {
+	-- 		javascript = { "biome", "prettier" },
+	-- 		typescript = { "biome", "prettier" },
+	-- 		javascriptreact = { "biome", "prettier" },
+	-- 		typescriptreact = { "biome", "prettier" },
+	-- 		css = { "biome", "prettier" },
+	-- 		scss = { "biome", "prettier" },
+	-- 		html = { "biome", "prettier" },
+	-- 		json = { "biome", "prettier" },
+	-- 		yaml = { "prettier" },
+	-- 		markdown = { "prettier" },
+	--
+	-- 		lua = { "stylua" },
+	-- 		["*"] = { "lsp" },
+	-- 	},
+	--
+	-- 	formatters = {
+	-- 		stylua = {
+	-- 			command = "stylua",
+	-- 			args = {
+	-- 				"--search-parent-directories",
+	-- 				"--stdin-filepath",
+	-- 				"$FILENAME",
+	-- 				"-",
+	-- 			},
+	-- 		},
+	-- 		prettier = {
+	-- 			command = "prettier",
+	-- 			args = { "--stdin-filepath", "$FILENAME" },
+	-- 		},
+	-- 		biome = {
+	-- 			command = "biome",
+	-- 			args = { "format", "--stdin-file-path", "$FILENAME" },
+	-- 		},
+	-- 	},
+	--
+	-- 	-- format_on_save = {
+	-- 	--   timeout_ms = 500,
+	-- 	--   lsp_fallback = true, -- Fallback to LSP formatter if primary fails
+	-- 	-- },
+	-- },
+	-- config = function(_, opts)
+	-- 	require("conform").setup(opts)
+	--
+	-- 	vim.keymap.set("n", "<leader>fm", function()
+	-- 		require("conform").format({ async = true, lsp_fallback = true })
+	-- 		vim.notify("Formatted buffer", vim.log.levels.INFO)
+	-- 	end, { desc = "Format current buffer" })
+	-- end,
 }

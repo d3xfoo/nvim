@@ -20,9 +20,10 @@ return {
 			-- Set Copilot filetypes (optional)
 			vim.g.copilot_filetypes = {
 				markdown = true,
-				txt = true,
+				txt = false,
+                text = false,
 				gitcommit = true,
-				lua = true,
+				lua = false,
 				javascript = false,
 				typescript = false,
 				javascriptreact = false,
@@ -30,6 +31,7 @@ return {
 				html = false,
 				css = true,
 				sh = false,
+                go = false,
 			}
 		end,
 	},
