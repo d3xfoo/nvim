@@ -1,5 +1,5 @@
 local augroup = vim.api.nvim_create_augroup
-local nturf = augroup('Nturf', {})
+local dex = augroup('Dex', {})
 local yank_group = augroup("HighlightYank", {})
 
 local autocmd = vim.api.nvim_create_autocmd
@@ -50,7 +50,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 autocmd('LspAttach', {
-    group = nturf,
+    group = dex,
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)

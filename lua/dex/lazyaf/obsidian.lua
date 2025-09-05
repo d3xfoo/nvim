@@ -35,7 +35,7 @@ return {
             },
             -- I want to set conceallevel to 0 so that I can see the markdown syntax
             ui = {
-                enable = true,
+                enable = false,
                 checkboxes = {},
                 bullets = {},
             },

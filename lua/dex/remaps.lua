@@ -11,13 +11,14 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set({ "n", "v" }, "$", "g_")
 
-vim.keymap.set({ 'n', 'v', }, '<leader>w', ':write<CR>')
+vim.keymap.set({ 'n', 'v', }, '<leader>w', ':write<CR>',{silent = true})
 vim.keymap.set({ 'n', 'v', }, '<leader>q', ':quit<CR>')
 
 -- quickfix keymaps
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<C-x>", "<cmd>cclose<CR>")
+-- vim.keymap.set("n", "<C-o>", "<cmd>copen<CR>")
 
 -- Increment/decrement
 vim.keymap.set("n", "<leader>+", "<C-a>")
