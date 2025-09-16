@@ -21,10 +21,10 @@ return {
             vim.keymap.set("n", "<leader>i", function() harpoon:list():select(4) end, { desc = "Harpoon to 4" })
 
             -- Replace at specific index
-            vim.keymap.set("n", "<leader><C-j>", function() harpoon:list():replace_at(1) end, { desc = "Replace Harpoon at 1" })
-            vim.keymap.set("n", "<leader><C-k>", function() harpoon:list():replace_at(2) end, { desc = "Replace Harpoon at 2" })
-            vim.keymap.set("n", "<leader><C-l>", function() harpoon:list():replace_at(3) end, { desc = "Replace Harpoon at 3" })
-            vim.keymap.set("n", "<leader><C-i>", function() harpoon:list():replace_at(4) end, { desc = "Replace Harpoon at 4" })
+            -- vim.keymap.set("n", "<leader><C-j>", function() harpoon:list():replace_at(1) end, { desc = "Replace Harpoon at 1" })
+            -- vim.keymap.set("n", "<leader><C-k>", function() harpoon:list():replace_at(2) end, { desc = "Replace Harpoon at 2" })
+            -- vim.keymap.set("n", "<leader><C-l>", function() harpoon:list():replace_at(3) end, { desc = "Replace Harpoon at 3" })
+            -- vim.keymap.set("n", "<leader><C-i>", function() harpoon:list():replace_at(4) end, { desc = "Replace Harpoon at 4" })
         end
     }
 }

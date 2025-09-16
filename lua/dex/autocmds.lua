@@ -40,7 +40,7 @@ autocmd('TextYankPost', {
 })
 
 -- Enable wrap for .txt and .md files
-vim.api.nvim_create_autocmd("FileType", {
+autocmd("FileType", {
     pattern = { "markdown", "text" },
     callback = function()
         vim.opt_local.wrap = true
