@@ -21,7 +21,7 @@ return {
 			vim.g.copilot_filetypes = {
 				markdown = true,
 				txt = false,
-                text = false,
+				text = false,
 				gitcommit = true,
 				lua = false,
 				javascript = true,
@@ -31,7 +31,7 @@ return {
 				html = false,
 				css = true,
 				sh = false,
-                go = false,
+				go = false,
 			}
 		end,
 	},

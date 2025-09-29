@@ -42,8 +42,6 @@ return {
 			update_in_insert = false,
 			float = {
 				focusable = false,
-				style = "minimal",
-				border = "rounded",
 				header = "",
 				prefix = "",
 				max_width = 80,
@@ -142,7 +140,7 @@ return {
 				return not util.root_pattern("deno.json", "deno.jsonc")(fname)
 					and util.root_pattern("tsconfig.json", "package.json", "jsconfig.json", ".git")(fname)
 			end,
-			single_file_support = false,
+			single_file_support = true,
 			init_options = {
 				preferences = {
 					includeCompletionsWithSnippetText = true,

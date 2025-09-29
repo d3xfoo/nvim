@@ -1,2 +1,3 @@
-require("dex")
-vim.cmd(":hi statusline guibg=#232136")
+vim.g.mapleader = " "
+
+require('custom.lazy')

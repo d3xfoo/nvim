@@ -1,56 +1,19 @@
-local augroup = vim.api.nvim_create_augroup
-local dex = augroup('Dex', {})
-local yank_group = augroup("HighlightYank", {})
-
 local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
+vim.cmd(":hi statusline guibg=#232136")
 
-function R(name)
-    require("plenery.reload").reload_module(name)
-end
-
-autocmd("FileType", {
-    pattern = "netrw",
-    callback = function()
-        vim.opt_local.readonly = false
-        vim.opt_local.modifiable = true
-    end
-})
-
-
-autocmd('TextYankPost', {
-    group = yank_group,
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = 'IncSearch',
+autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	group = augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank({
             timeout = 40,
         })
-    end,
-})
-
-autocmd('TextYankPost', {
-    group = yank_group,
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = 'IncSearch',
-            timeout = 40,
-        })
-    end,
-})
-
--- Enable wrap for .txt and .md files
-autocmd("FileType", {
-    pattern = { "markdown", "text" },
-    callback = function()
-        vim.opt_local.wrap = true
-        vim.opt_local.linebreak = true
-        vim.opt_local.breakindent = true
-    end,
+	end,
 })
 
 autocmd('LspAttach', {
-    group = dex,
+    group = augroup('LSP actions',{}),
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)

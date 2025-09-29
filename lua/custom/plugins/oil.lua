@@ -11,3 +11,4 @@ return {
         vim.keymap.set({ "n", "x" }, "<leader>fe", function() require("oil").open() end, { silent = true })
     end
 }
+

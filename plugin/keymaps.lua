@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>fe", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -24,7 +23,6 @@ vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
 -- vim.keymap.set("n", "<leader>+", "<C-a>")
 -- vim.keymap.set("n", "<leader>-", "<C-x>")
 
--- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- yanks to system clipboard
@@ -46,7 +44,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- plugs and test
 vim.keymap.set("n", "<leader>%", "<cmd>source %<CR>")
-vim.keymap.set({ "n", "v" }, "<leader>|", ":.lua<CR>")
+vim.keymap.set("n", "<leader>x", ":.lua<CR>")
+vim.keymap.set("v", "<leader>x", ":lua<CR>")
 -- vim.keymap.set("n", "<leader>t", "<cmd>PlenaryBustedFile %<CR>")
 
 -- Toggle inline diagnostics
@@ -59,3 +58,4 @@ end, { desc = "Toggle inline diagnostics" })
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
